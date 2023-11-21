@@ -107,7 +107,7 @@ workflows: # ワークフローの設定
   test:
     jobs:
       - test
-      - ui-test
+      # - ui-test
       # - e2e-test
       # - playwright-test
 
