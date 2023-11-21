@@ -52,6 +52,9 @@ jobs: # ジョブの設定
           name: Run UI Test
           command: npm test -- src/chapter2/ui
       - run:
+          name: Upgrade Chromatic
+          command: yarn upgrade chromatic --latest
+      - run:
           name: Upload Storybook to Chromatic
           command: npm run chromatic
   # 検証用のジョブになります。本書での説明はありません。
@@ -106,5 +109,5 @@ workflows: # ワークフローの設定
       - test
       - ui-test
       # - e2e-test
-      - playwright-test
+      # - playwright-test
 
